@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>FlukyCoders</title>
+    <title>Coming Soon - FlukyCoders</title>
     <style>
         *,
         html {
@@ -59,12 +59,24 @@
         }
 
         .font {
+            --code-color: #1cee33;
             color: #fff;
             font-family: monospace;
             font-size: 15px;
             text-align: left;
             position: static;
             margin: 10px;
+        }
+
+        .blink {
+            background-color: var(--code-color);
+            animation: blinker 0.9s steps(2, start) infinite;
+        }
+
+        @keyframes blinker {
+            to {
+                visibility: hidden;
+            }
         }
     </style>
 </head>
@@ -76,7 +88,9 @@
         <span class="dot dot--green"> </span>
     </div>
     <div id="screen">
-        <p class="font">flukycoders@10.0.0.1:~$ Coming Soon</p>
+        <p class="font">flukycoders@10.0.0.1:~$<span style="color: var(--code-color)">Page coming soon<span
+                    class="blink">&nbsp;</span></span>
+        </p>
     </div>
 
 </body>
